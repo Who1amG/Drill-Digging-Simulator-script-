@@ -45,6 +45,9 @@ local VALID_DRILLS = {
     Glacier=true,
     Icebreaker=true,
     Permafrost=true,
+    Inferno=true,
+    Scalecrusher=true,
+    Skyfang=true,
 
 	["Aegean Tide"]=true,
 	Olympian=true,
@@ -272,6 +275,10 @@ local function applyAutoScale()
 end
 
 applyAutoScale()
+task.delay(4, function()
+	notify("DRACO UI", UserInputService.TouchEnabled and "Device detected: MOBILE 📱" or "Device detected: PC 🖥️")
+end)
+
 
 
 local topbar = Instance.new("Frame", frame)
